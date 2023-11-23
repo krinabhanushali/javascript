@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel</title>
+    <!-- jquery_owl_carousel_css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+        }
+        p{
+            color: grey;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .owl-theme .owl-nav {
+            margin-top: 0px;
+        }
+        .owl-carousel .owl-nav button.owl-prev{
+            padding: 0px 15px 6px 15px !important;
+            background-color: red;
+            margin-top: 20px;
+        }
+        .owl-carousel .owl-nav button.owl-next{
+            padding: 0px 15px 6px 15px !important;
+            background-color: red;
+            margin-top: 20px;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: green;
+        }
+        .container{
+            background-color: black;
+            height: 450px;
+        }
+        .loop .f_1, .f_2, .f_3, .f_4, .f_5{
+            height: 200px;
+            width: 250px;
+        }
+        .loop .f_1{
+            background-color: yellow;
+        }
+        .loop .f_2{
+            background-color: red;
+        }
+        .loop .f_3{
+            background-color: purple;
+        }
+        .loop .f_4{
+            background: green;
+        }
+        .loop .f_5{
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Javascript Slider</h1>
+        <p>Created by Dropinks</p>
+        <div class="loop owl-carousel owl-theme">
+            <div class="f_1"></div>
+            <div class="f_2"></div>
+            <div class="f_3"></div>
+            <div class="f_4"></div>
+            <div class="f_5"></div>
+        </div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- owl_Carousel script cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                center: true,
+                items:2,
+                loop:true,
+                autoplayTimeout : 3000,
+                autoplay : true,
+                margin:0,
+                dots:false,
+                nav: true,
+                responsive:{
+                    600:{
+                        items:4
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>
